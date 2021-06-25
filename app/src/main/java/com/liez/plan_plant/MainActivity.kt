@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         textResult = findViewById(R.id.tv_text2)
         textButton = findViewById(R.id.button_capture)
         pb = findViewById(R.id.circularProgressBar)
-        pb.apply { progressMax = 10000f }
+        pb.apply { progressMax = 5000f }
 
         persiapanSensor()
 
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private var banyakSample: Int = 4
     private var oldInput: Float = 0F
     private var avgNow: Float = 0F
-    private var sensorDibulatkan: Float = 0F
+    private var sensorDibulatkan: Double = 0.0
 
     override fun onSensorChanged(event: SensorEvent?) {
         if (event?.sensor?.type == Sensor.TYPE_LIGHT) {
@@ -89,7 +89,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
                 pb.setProgressWithAnimation(avgNow)
 
                 // Send Data ke Firebase
-                sendData(bulatkan(avgNow))
+                sensorDibulatkan = bulatkan(avgNow).toDouble()
+                sendData(sensorDibulatkan)
 
                 // reset sehabis 5 input
                 oldInput = 0F
@@ -128,7 +129,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private fun category(brightness: Float): String {
 
         return when (brightness.toInt()) {
-            0 -> "Tanaman tidak bisa tumbuh disini"
+            0 -> "Tanaman tanpa klorofil bisa tumbuh disini"
             in 1..10 -> "Jamur bisa tumbuh disini"
             in 11..50 -> "Tanaman kecil bisa tumbuh disini"
             in 51..5000 -> "Tanaman Hias dan Sayuran bisa tumbuh disini"
@@ -155,7 +156,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     // Kirim Data Ke Firebase
 
-    private fun sendData(nilaiSnsr: Float) {
+    private fun sendData(nilaiSnsr: Double) {
         // Deklarasi Referensi Database Firebase
         val ref = FirebaseDatabase.getInstance().getReference("Nilai Sensor")
 
