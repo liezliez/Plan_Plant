@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "891112378824",
+    "project_id": "plan-plant-341da",
+    "storage_bucket": "plan-plant-341da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891112378824:android:1b4a008d4db9f04e27f0fd",
+        "android_client_info": {
+          "package_name": "com.liez.plan_plant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891112378824-e8lc311thpge395ksgcokq8m5r0k30u1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtSBju0qXOg9m_G_kfps4As1iU91R6hSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891112378824-e8lc311thpge395ksgcokq8m5r0k30u1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
