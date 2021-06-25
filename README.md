@@ -1,3 +1,6 @@
+![ic_launcher](https://user-images.githubusercontent.com/42132479/123427141-6fd38d00-d5ee-11eb-9584-98ae33e79236.png)
+
+
 # Plan_Plant
  Plan_Plant adalah Aplikasi Android yang akan memberikan Perkiraan kelayakan sebuah tempat untuk ditanami Tanaman berdasarkan Intensitas Cahayanya. Aplikasi ini dapat pula dijadikan sebagai Sensor Monitoring Cahaya dengan menggunakan Firebase Realtime Database Service
  
