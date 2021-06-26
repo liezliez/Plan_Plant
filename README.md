@@ -5,7 +5,7 @@
  Plan_Plant adalah Aplikasi Android yang akan memberikan Perkiraan kelayakan sebuah tempat untuk ditanami Tanaman berdasarkan Intensitas Cahayanya. Aplikasi ini dapat pula dijadikan sebagai Sensor Monitoring Cahaya dengan menggunakan Firebase Realtime Database Service
  
  # Cara Kerja
- Aplikasi ini akan membaca Value Sensor Cahaya yang terdapat pada HP Android, lalu dengan menggunakan metode Filter MVA, akan memberikan nilai pengukuran dalam standar lux dan mengkategorikan intensitas cahaya tersebut dengan jenis tanaman yang cocok
+ Aplikasi ini akan membaca Value Sensor Cahaya yang terdapat pada Smartphone Android, lalu dengan menggunakan metode Filter MVA, akan memberikan nilai pengukuran dalam standar lux dan mengkategorikan intensitas cahaya tersebut dengan jenis tanaman yang cocok
  
  Aplikasi ini dapat pula dijadikan sebagai sumber sensor monitoring dengan menggunakan Firebase Realtime Database Service
 
